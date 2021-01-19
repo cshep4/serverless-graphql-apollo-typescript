@@ -1,0 +1,7 @@
+type Query {
+    greeting: String!
+}
+
+schema {
+    query: Query
+}
