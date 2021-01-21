@@ -13,6 +13,7 @@ plugins:
 provider:
   name: aws
   runtime: nodejs12.x
+  logRetentionInDays: 14
   apiGateway:
     minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
   environment:
@@ -21,6 +22,8 @@ provider:
 functions:
   graphql:
     handler: src/handler.graphqlHandler
+    environment:
+      STAGE: ${opt:stage, self:provider.stage, 'dev'}
     events:
       - http:
           path: graphql

@@ -1,7 +1,5 @@
-const resolvers: any = {
+export const resolvers: any = {
     Query: {
         greeting: () => "Hello world!"
     },
 };
-
-export default resolvers;

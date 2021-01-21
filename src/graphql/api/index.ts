@@ -21,6 +21,4 @@ const walk = (dir: string): string[] => {
     return results;
 };
 
-const typeDefs: any = walk("./src/graphql/api");
-
-export default typeDefs;
+export const typeDefs: any = walk("./src/graphql/api");
