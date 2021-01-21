@@ -3,7 +3,7 @@
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 ![Deploy](https://github.com/cshep4/serverless-graphql-apollo-typescript/workflows/Deploy/badge.svg)
 
-Serverless Typscript GraphQL Lambda functions which use the following:
+Serverless TypeScript GraphQL API which use the following:
 
 * [Apollo](http://dev.apollodata.com/) GraphQL framework
   using [graphql-server-lambda](https://github.com/apollographql/graphql-server/tree/master/packages/graphql-server-lambda)
