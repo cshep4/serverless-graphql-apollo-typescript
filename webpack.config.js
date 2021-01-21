@@ -22,7 +22,6 @@ module.exports = {
     externals: [nodeExternals()],
     module: {
         rules: [
-            // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
             {
                 test: /\.(tsx?)$/,
                 loader: 'ts-loader',
@@ -40,20 +39,5 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-        new CopyPlugin({
-            patterns: [
-                {
-                    from: './src/graphql/api/**/*.graphql',
-                    to: './'
-                },
-            ]
-        }),
-        // new ForkTsCheckerWebpackPlugin({
-        //   eslint: true,
-        //   eslintOptions: {
-        //     cache: true
-        //   }
-        // })
-    ],
+    plugins: [new CopyPlugin({patterns: [{from: './src/graphql/api/**/*.graphql', to: './'}]})],
 };
